@@ -1,0 +1,11 @@
+# File sistem OS
+.DS_Store
+Thumbs.db
+
+# File IDE / Editor
+.vscode/
+.idea/
+
+# File konfigurasi lokal & log
+*.log
+.env
