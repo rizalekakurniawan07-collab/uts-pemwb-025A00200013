@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
+#mencegah eror ketika salah input kode
 
 # Mengimpor data dan fungsi logika
-require_once 'data.php';
-require_once 'functions.php';
+require_once 'data.php';#memanggil data
+require_once 'functions.php';#memanggil fungsi logika
 
 # Pemrosesan filter data menu via URL ($_GET)
 $kategoriDipilih = $_GET['kategori'] ?? 'Semua';
@@ -23,21 +24,21 @@ $kategoriList = ['Semua', 'Kopi', 'Non-Kopi', 'Snack', 'Makanan'];
     <link rel="stylesheet" href="style.css">
     <style>
         .shop-location {
-            font-size: 0.85em;
-            color: #27ae60;
+            font-size: 0.85em; /*mengubah ukuran teks lokasi*/
+            color: #27ae60; /*memberikan warna hijau pada teks lokasi */
             margin-top: 4px;
         }
         .card-img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
+            width: 100%; /*membuat gambar memenuhi card*/
+            height: 160px; /*memberikan tinggi card */
+            object-fit: cover; /*membuat gambar memenuhi card */
         }
         .nav-back {
-            display: inline-block;
+            display: inline-block; /*membuat gambar memenuhi card*/
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: #2c3e50; /*memberikan warna hijau pada teks lokasi */
             text-decoration: none;
-            font-weight: bold;
+            font-weight: bold; /*memberikan warna hijau pada teks lokasi */
         }
     </style>
 </head>
@@ -67,9 +68,10 @@ $kategoriList = ['Semua', 'Kopi', 'Non-Kopi', 'Snack', 'Makanan'];
         <div class="menu-grid">
             <?php foreach ($filteredMenu as $item): ?>
                 <?php 
-                    $hargaEfektif = hitungHargaDiskon($item['harga'], $item['diskon_persen']);
-                    $isTermurah = ($item['id'] === $idMenuTermurah);
+                    $hargaEfektif = hitungHargaDiskon($item['harga'], $item['diskon_persen']);#menampilkan harga sesudah di diskon 
+                    $isTermurah = ($item['id'] === $idMenuTermurah);#menampilkan harga termurah
                 ?>
+                <!--membuat card menu -->
                 <div class="menu-card">
                     <div class="card-badges">
                         <?php if ($item['is_promo']): ?>
@@ -79,13 +81,13 @@ $kategoriList = ['Semua', 'Kopi', 'Non-Kopi', 'Snack', 'Makanan'];
                             <span class="badge badge-cheapest">PALING TERJANGKAU</span>
                         <?php endif; ?>
                     </div>
-                    <!-- Foto Menu Produk -->
-                    <img src="<?= htmlspecialchars($item['gambar']) ?>" alt="<?= htmlspecialchars($item['nama']) ?>" class="card-img">
+                   <!-- Menggunakan Null Coalescing Operator (??) sebagai fallback gambar default -->
+                    <img src="<?= htmlspecialchars($item['gambar'] ?? 'https://via.placeholder.com/400x250?text=Kopi+Shop+Cengklik') ?>" alt="<?= htmlspecialchars($item['nama']) ?>" class="card-img">
                     
                     <div class="card-body">
-                        <span class="category-tag"><?= htmlspecialchars($item['kategori']) ?></span>
-                        <h3 class="card-title"><?= htmlspecialchars($item['nama']) ?></h3>
-                        <p class="card-desc"><?= htmlspecialchars($item['deskripsi']) ?></p>
+                        <span class="category-tag"><?= htmlspecialchars($item['kategori']) ?></span> <!--Menampilkan kategori-->
+                        <h3 class="card-title"><?= htmlspecialchars($item['nama']) ?></h3><!--Menampilkan nama-->
+                        <p class="card-desc"><?= htmlspecialchars($item['deskripsi']) ?></p> <!--Menampilkan deskripsi-->
                         
                         <div class="price-box">
                             <?php if ($item['is_promo']): ?>
