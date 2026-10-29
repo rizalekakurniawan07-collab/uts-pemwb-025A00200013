@@ -1,0 +1,11 @@
+# File sistem OS
+.DS_Store # File sampah bawaan macOS yang menyimpan pengaturan folder
+Thumbs.db # File cache gambar bawaan Windows
+
+# File IDE / Editor
+.vscode/ # Folder konfigurasi editor Visual Studio Code
+.idea/ # Folder konfigurasi editor PhpStorm / IntelliJ
+
+# File konfigurasi lokal & log
+*.log #  Mencegah semua file catatan error/log terunggah
+.env # Mencegah file rahasia (seperti kata sandi/database) terunggah

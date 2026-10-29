@@ -37,11 +37,12 @@ Aplikasi web berbasis PHP tanpa database (*array-driven structure*) yang terbagi
 
 ## Struktur Proyek
 ```text
-uts-pemwb-025A00200013/
-├── index.php         # Halaman profil mahasiswa dan pintu masuk navigasi
-├── katalog.php       # Halaman utama rendering katalog menu dinamis
-├── data.php          # Penyimpanan data array multidimensi menu kedai
-├── functions.php     # Fungsi logika bisnis (diskon, filter, harga termurah)
-├── style.css         # Styling UI responsif dan layout grid
-├── .gitignore        # Berkas pengecualian Git
-└── README.md         # Dokumentasi resmi proyek
+uts-pemweb-025A00200013/
+├── index.php          # Halaman profil kafe, informasi operasional, dan navigasi utama
+├── katalog.php        # Halaman katalog menu dinamis, filter kategori, dan statistik
+├── pesan.php          # Halaman formulir pemesanan menu multi-item dan pembayaran QRIS
+├── data.php           # Penyimpanan data array multidimensi menu kedai
+├── functions.php      # Fungsi logika bisnis (hitung diskon, rata-rata, filter, termurah)
+├── style.css          # Styling antarmuka responsif, tata letak flexbox dan grid
+├── .gitignore         # Berkas pengecualian Git
+└── README.md          # Dokumentasi resmi proyek UTS

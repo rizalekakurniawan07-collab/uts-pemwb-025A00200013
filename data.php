@@ -1,85 +1,86 @@
 <?php
-declare(strict_types=1);
-
+declare(strict_types=1);#php menjaga tipe data secara ketat 
+#mengambil data dari file data.php
+# Data utama katalog Kopi Shop Cengklik (8 menu)
 $menuItems = [
     [
-        'id'          => 1,
-        'nama'        => 'Espresso Double Shot',
-        'kategori'    => 'Kopi',
-        'harga'       => 22000,
-        'is_promo'    => false,
+        'id'            => 1,#mengidentifikasi data/ID
+        'nama'          => 'Espresso Double Shot',#nama menu 
+        'kategori'      => 'Kopi',#kategori menu
+        'harga'         => 22000,#harga menu
+        'is_promo'      => false,#menentukan apakah menu sedang promo
+        'diskon_persen' => 0,#persentase diskon
+        'deskripsi'     => 'Ekstraksi biji kopi arabika pilihan dengan rasa yang kuat dan mantap.',#deskripsi menu
+        'gambar'        => 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&q=80'#gambar menu
+    ],
+    [
+        'id'            => 2,#mengidentifikasi data/ID
+        'nama'          => 'Berry Kissme',#nama menu 
+        'kategori'      => 'non-kopi',#kategori menu
+        'harga'         => 25000,#harga menu
+        'is_promo'      => true,#menentukan apakah menu sedang promo
+        'diskon_persen' => 15,#persentase diskon
+        'deskripsi'     => 'Minuman segar perpaduan sari buah beri manis dengan foam lembut di atasnya.',#deskripsi menu
+        'gambar'        => 'assets/berry-kissme.jpg'#gambar menu
+    ],
+    [
+        'id'            => 3,
+        'nama'          => 'Cenkklik Pride',
+        'kategori'      => 'Kopi',
+        'harga'         => 23000,
+        'is_promo'      => false,
         'diskon_persen' => 0,
-        'deskripsi'   => 'Ekstraksi biji kopi arabika pilihan dengan rasa yang kuat dan mantap.',
-        'gambar'      => 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&q=80'
+        'deskripsi'     => 'Signature es kopi susu spesial Kopi Shop Cengklik pemikat sunset.',
+        'gambar'        => 'assets/cengklik-pride.jpg'
     ],
     [
-        'id'          => 2,
-        'nama'        => 'Caramel Macchiato',
-        'kategori'    => 'Kopi',
-        'harga'       => 35000,
-        'is_promo'    => true,
-        'diskon_persen' => 15,
-        'deskripsi'   => 'Paduan espresso, susu segar, dan sirup karamel manis gurih.',
-        'gambar'      => 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=400&q=80'
-    ],
-    [
-        'id'          => 3,
-        'nama'        => 'Matcha Oat Latte',
-        'kategori'    => 'Non-Kopi',
-        'harga'       => 38000,
-        'is_promo'    => true,
+        'id'            => 4,
+        'nama'          => 'Golden Sunset',
+        'kategori'      => 'Non-Kopi',
+        'harga'         => 25000,
+        'is_promo'      => true,
         'diskon_persen' => 10,
-        'deskripsi'   => 'Bubuk matcha Uji premium dengan campuran susu gandum creamy.',
-        'gambar'      => 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400&q=80'
+        'deskripsi'     => 'Minuman mocktail dingin segar dengan perasan jeruk dan daun mint tepi waduk.',
+        'gambar'        => 'assets/golden-sunset.jpg'
     ],
     [
-        'id'          => 4,
-        'nama'        => 'Earl Grey Milk Tea',
-        'kategori'    => 'Non-Kopi',
-        'harga'       => 28000,
-        'is_promo'    => false,
-        'diskon_persen' => 0,
-        'deskripsi'   => 'Teh beraroma citrus bergamot khas disajikan dengan susu lembut.',
-        'gambar'      => 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400&q=80'
-    ],
-    [
-        'id'          => 5,
-        'nama'        => 'Croissant Almond',
-        'kategori'    => 'Snack',
-        'harga'       => 30000,
-        'is_promo'    => true,
-        'diskon_persen' => 20,
-        'deskripsi'   => 'Pastry renyah berlapis dengan isian krim almond dan taburan almond slice.',
-        'gambar'      => 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&q=80'
-    ],
-    [
-        'id'          => 6,
-        'nama'        => 'Cinnamon Roll',
-        'kategori'    => 'Snack',
-        'harga'       => 25000,
-        'is_promo'    => false,
-        'diskon_persen' => 0,
-        'deskripsi'   => 'Roti gulung rempah kayu manis disiram cream cheese frosting.',
-        'gambar'      => 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80'
-    ],
-    [
-        'id'          => 7,
-        'nama'        => 'Beef Lasagna',
-        'kategori'    => 'Makanan',
-        'harga'       => 45000,
-        'is_promo'    => false,
-        'diskon_persen' => 0,
-        'deskripsi'   => 'Pasta panggang berlapis daging sapi cincang, saus bolognese, dan keju melimpah.',
-        'gambar'      => 'https://images.unsplash.com/photo-1619895092538-128341789043?w=400&q=80'
-    ],
-    [
-        'id'          => 8,
-        'nama'        => 'French Fries Truffle',
-        'kategori'    => 'Makanan',
-        'harga'       => 27000,
-        'is_promo'    => true,
+        'id'            => 5,
+        'nama'          => 'Burger Beef Classic',
+        'kategori'      => 'Snack',
+        'harga'         => 33000,
+        'is_promo'      => true,
         'diskon_persen' => 10,
-        'deskripsi'   => 'Kentang goreng renyah dengan aroma minyak truffle dan keju parmesan.',
-        'gambar'      => 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&q=80'
+        'deskripsi'     => 'Burger daging sapi gurih lembut dilengkapi seporsi kentang goreng renyah.',
+        'gambar'        => 'assets/Burger-beef.jpg'
+    ],
+    [
+        'id'            => 6,
+        'nama'          => 'Burger Cengklik',
+        'kategori'      => 'Snack',
+        'harga'         => 30000,
+        'is_promo'      => false,
+        'diskon_persen' => 0,
+        'deskripsi'     => 'Burger spesial telur dan keju khas Cengklik disajikan bersama french fries.',
+        'gambar'        => 'assets/Burger-cenklik.jpg'
+    ],
+    [
+        'id'            => 7,
+        'nama'          => 'BBQ Pride',
+        'kategori'      => 'Makanan',
+        'harga'         => 39000,
+        'is_promo'      => false,
+        'diskon_persen' => 0,
+        'deskripsi'     => 'Daging tenderloin panggang saus BBQ premium disajikan dengan kentang dan salad.',
+        'gambar'        => 'assets/BBQ_pride.jpg'
+    ],
+    [
+        'id'            => 8,
+        'nama'          => 'Chicken Blackpaper',
+        'kategori'      => 'Makanan',
+        'harga'         => 27000,
+        'is_promo'      => true,
+        'diskon_persen' => 10,
+        'deskripsi'     => 'Nasi hangat dengan ayam crispy saus lada hitam pedas, paprika, dan salad segar.',
+        'gambar'        => 'assets/black-paper.jpg'
     ],
 ];

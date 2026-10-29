@@ -1,58 +1,87 @@
+/*menghapus margin dan padding bawaan browser*/
 * {
     box-sizing: border-box;
+    /* memastikan padding & border tidak menambah kan ukuran elemen*/
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/*membuat tampilan web agar sesuai dengan layar perangkat*/
 body {
     background-color: #f8f9fa;
+    /* warna abu-abu muda */
     color: #333;
+    /* warna teks hitam */
     line-height: 1.6;
+    /* spasi antar baris teks */
     padding: 20px;
+    /* jarak dari tepi layar */
 }
 
+/*membuat layout utama dengan lebar maksimal 1100px dan margin auto*/
 .container {
     max-width: 1100px;
+    /* mengatur lebar maksimal */
     margin: 0 auto;
+    /* mengatur posisi di tengah */
 }
 
+/*membuat tampilan header ( judul & identitas )*/
 header {
     text-align: center;
+    /* mengatur posisi teks di tengah */
     margin-bottom: 30px;
+    /* jarak dari bawah */
     padding: 20px 0;
+    /* jarak dari atas dan bawah */
     border-bottom: 2px solid #e9ecef;
+    /* garis bawah */
 }
 
+/*menampilkan judul dan informasi mahasiswa*/
 header h1 {
     color: #2c3e50;
     margin-bottom: 5px;
 }
 
+/*menampilkan informasi mahasiswa*/
 .student-info {
     font-size: 0.9em;
     color: #6c757d;
 }
 
+/*membuat tampilan filter/tombol (flexbox*/
 .filter-section {
     display: flex;
+    /* mengatur tampilan menjadi flexbox */
     justify-content: center;
+    /* mengatur posisi di tengah */
     gap: 10px;
+    /* jarak antar tombol */
     margin-bottom: 30px;
+    /* jarak dari bawah */
     flex-wrap: wrap;
+    /* mengatur agar tombol bisa di wrap */
 }
 
+/*membuat tampilan tombol filter*/
 .filter-btn {
     padding: 8px 16px;
+    /* mengatur ukuran tombol */
     border: 1px solid #ced4da;
     background-color: #ffffff;
     color: #495057;
     border-radius: 20px;
+    /* membuat sudut tombol melengkul bulat (pills) */
     text-decoration: none;
+    /* menghilangkan garis bawah pada link */
     font-size: 0.9em;
     transition: all 0.3s ease;
+    /* memberikan efek transisi halus saat perubahan */
 }
 
+/*ketika mouse diarahkan ke tombol filter atau ketika tombol filter sedang aktif*/
 .filter-btn:hover,
 .filter-btn.active {
     background-color: #2c3e50;
@@ -60,25 +89,33 @@ header h1 {
     border-color: #2c3e50;
 }
 
+/*membuat tampilan grid menu*/
 .menu-grid {
     display: grid;
+    /*membuat tampilan grid dengan ukuran minimum 240px dan maksimum 1fr*/
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 20px;
+    /* jarak antar card */
 }
 
+/*membuat tampilan card menu*/
 .menu-card {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    /* membuat bayangan */
     overflow: hidden;
+    /* mengatur tampilan agar tidak keluar dari card */
     position: relative;
     display: flex;
     flex-direction: column;
     border: 1px solid #e9ecef;
 }
 
+/*membuat tampilan badge (label) promo & termurah */
 .card-badges {
     position: absolute;
+    /*membuat badge menempel melayang di pojok kiri atas card*/
     top: 10px;
     left: 10px;
     display: flex;
@@ -87,6 +124,7 @@ header h1 {
     z-index: 10;
 }
 
+/*membuat tampilan badge*/
 .badge {
     padding: 4px 8px;
     font-size: 0.75em;
@@ -95,34 +133,42 @@ header h1 {
     color: #fff;
 }
 
+/*membuat tampilan badge promo*/
 .badge-promo {
     background-color: #e74c3c;
 }
 
+/*membuat tampilan badge termurah*/
 .badge-cheapest {
     background-color: #27ae60;
 }
 
+/*membuat tampilan isi card/kartu menu*/
 .card-body {
     padding: 15px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    /*membuat isi card memenuhi sisi ruang agar tinggi sama card sama rata */
 }
 
+/*membuat tampilan tag kategori*/
 .category-tag {
     font-size: 0.8em;
     color: #888;
     text-transform: uppercase;
+    /*membuat teks kategori menjadi huruf besar */
     letter-spacing: 0.5px;
 }
 
+/*membuat tampilan judul menu*/
 .card-title {
     font-size: 1.1em;
     margin: 5px 0;
     color: #2c3e50;
 }
 
+/*membuat tampilan deskripsi menu*/
 .card-desc {
     font-size: 0.85em;
     color: #666;
@@ -130,23 +176,29 @@ header h1 {
     flex-grow: 1;
 }
 
+/*membuat tampilan harga*/
 .price-box {
     margin-top: auto;
+    /*membuat harga berada di bawah card */
 }
 
+/*membuat tampilan harga asli/sebelum diskon*/
 .original-price {
     text-decoration: line-through;
+    /*memberikan efek coret pada harga */
     color: #999;
     font-size: 0.85em;
     margin-right: 5px;
 }
 
+/*membuat tampilan harga akhir/sesudah diskon*/
 .final-price {
     font-weight: bold;
     font-size: 1.1em;
     color: #2c3e50;
 }
 
+/*membuat tampilan footer*/
 footer {
     text-align: center;
     margin-top: 40px;
@@ -154,4 +206,137 @@ footer {
     color: #888;
     font-size: 0.85em;
     border-top: 1px solid #e9ecef;
+}
+
+/* Mengatur gambar hero profil kafe agar pas dengan lebar kartu */
+.cafe-hero-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Mengatur teks deskripsi kafe */
+.cafe-desc {
+    font-size: 0.95em;
+    color: #555;
+    margin: 15px 0 20px 0;
+    line-height: 1.6;
+}
+
+/* Mengatur kotak informasi lokasi & jam operasional */
+.info-box {
+    background-color: #f1f8e9;
+    border: 1px solid #c8e6c9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.9em;
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+/*membuat tampilan paragraf pada info box*/
+.info-box p {
+    margin-bottom: 6px;
+}
+
+/*membuat tampilan paragraf terakhir pada info box*/
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Mengatur wadah tombol aksi berdampingan */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Mengatur tombol promo merah */
+.btn-promo-nav {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #e74c3c;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+/*membuat tampilan tombol promo*/
+.btn-promo-nav:hover {
+    background-color: #c0392b;
+}
+
+/* Card Pemesanan & Form */
+.order-card {
+    background: #ffffff;
+    max-width: 480px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/*membuat tampilan form*/
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* halaman profil kafe */
+.form-group label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #2c3e50;
+}
+
+/*halaman katalog & filter */
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 4px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+}
+
+/*halaman order*/
+.qris-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 2px dashed #27ae60;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Styling Halaman Katalog */
+.shop-location {
+    font-size: 0.85em;
+    color: #27ae60;
+    margin-top: 4px;
+}
+
+/*membuat tampilan gambar card */
+.card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/*membuat tampilan tombol kembali*/
+.nav-back {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
 }
