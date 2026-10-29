@@ -16,7 +16,7 @@ $menuItems = [
     [
         'id'            => 2,#mengidentifikasi data/ID
         'nama'          => 'Berry Kissme',#nama menu 
-        'kategori'      => 'non-kopi',#kategori menu
+        'kategori'      => 'Non-Kopi',#kategori menu
         'harga'         => 25000,#harga menu
         'is_promo'      => true,#menentukan apakah menu sedang promo
         'diskon_persen' => 15,#persentase diskon
