@@ -7,5 +7,5 @@ Thumbs.db # File cache gambar bawaan Windows
 .idea/ # Folder konfigurasi editor PhpStorm / IntelliJ
 
 # File konfigurasi lokal & log
-*.log #  Mencegah semua file catatan error/log terunggah
+.log #  Mencegah semua file catatan error/log terunggah
 .env # Mencegah file rahasia (seperti kata sandi/database) terunggah
