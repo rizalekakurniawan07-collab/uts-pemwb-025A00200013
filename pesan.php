@@ -14,12 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ['id' => (int)($_POST['id_menu_2'] ?? 0), 'porsi' => max(0, (int)($_POST['jumlah_2'] ?? 0))]
     ];
 
-    foreach ($pesananInput as $pesan) {
-        if ($pesan['id'] > 0 && $pesan['porsi'] > 0) {
-            foreach ($menuItems as $item) {
-                if ($item['id'] === $pesan['id']) {
-                    $subtotal = hitungHargaDiskon($item['harga'], $item['diskon_persen']) * $pesan['porsi'];
-                    $totalBayar += $subtotal;
+    foreach ($pesananInput as $pesan) {#perulangan untuk memproses pesanan
+        if ($pesan['id'] > 0 && $pesan['porsi'] > 0) {#memeriksa apakah id > 0 dan jumlah porsi > 0
+            foreach ($menuItems as $item) {#perulangan untuk memproses menu items
+                if ($item['id'] === $pesan['id']) {#memeriksa apakah id sama dengan id item
+                    $subtotal = hitungHargaDiskon($item['harga'], $item['diskon_persen']) * $pesan['porsi'];#menghitung harga diskon dan dikalikan dengan jumlah porsi
+                    $totalBayar += $subtotal;#menambahkan subtotal ke total bayar
                     $rincianPesanan[] = ['nama' => $item['nama'], 'porsi' => $pesan['porsi'], 'subtotal' => $subtotal];
                     break;
                 }
@@ -31,13 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasir Pemesanan - Kopi Shop Cengklik</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!--membuat halaman pesan-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--menampilkan halaman pesan di berbagai perangkat-->
+    <title>Kasir Pemesanan - Kopi Shop Cengklik</title> <!--judul halaman pesan-->
+    <link rel="stylesheet" href="style.css"> <!--menampilkan style css-->
 </head>
 <body>
-    <div class="container">
+    <div class="container"> <!--wadah utama halaman pesan-->
         <header>
             <a href="katalog.php" class="nav-back">⬅ Kembali ke Katalog</a>
             <h1>Kasir & Pemesanan Online</h1>
@@ -75,12 +75,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </select>
-                        <input type="number" name="jumlah_2" value="1" min="0" placeholder="Porsi">
+                        <input type="number" name="jumlah_2" value="1" min="0" placeholder="Porsi"> <!--input untuk jumlah porsi-->
                     </div>
 
                     <button type="submit" class="btn-pesan" style="width: 100%; border: none; cursor: pointer; padding: 12px;">
                         Hitung & Bayar
-                    </button>
+                    </button> <!--tombol untuk menghitung dan membayar-->
                 </form>
 
                 <!-- Tampilan Pembayaran QRIS Dinamis -->
