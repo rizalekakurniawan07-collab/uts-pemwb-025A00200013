@@ -102,11 +102,11 @@ uts-pemweb-025A00200013/
 ## 8. Tangkapan Layar (Screenshots Antarmuka)
 
 ### Halaman Beranda & Profil (`index.php`)
-![tangkapan layar](assets/sreenshot-index.jpeg)
+![tangkapan layar](assets/screenshot-index.jpeg)
 ### Halaman Katalog Menu Dinamis (`katalog.php`)
-![tangkapan layar](assets/sreenshot-katalog.jpeg)
+![tangkapan layar](assets/screenshot-katalog.jpeg)
 ### Halaman Kasir Pemesanan Online (`pesan.php`)
-![tangkapan layar](assets/sreenshot-pesan.jpeg)
+![tangkapan layar](assets/screenshot-pesan.jpeg)
 
 ---
 
