@@ -77,25 +77,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </select>
                         <input type="number" name="jumlah_2" value="1" min="0" placeholder="Porsi"> <!--input untuk jumlah porsi-->
                     </div>
-
-                    <button type="submit" class="btn-pesan" style="width: 100%; border: none; cursor: pointer; padding: 12px;">
-                        Hitung & Bayar
-                    </button> <!--tombol untuk menghitung dan membayar-->
-                </form>
-
-                <!-- Tampilan Pembayaran QRIS Dinamis -->
-                <?php if (!empty($rincianPesanan)): ?>
-                    <div class="qris-box">
-                        <h3>Total Pembayaran: <?= formatRupiah($totalBayar) ?></h3>
-                        <p style="font-size: 0.85em; color: #555; margin-bottom: 10px;">
-                            <?php foreach ($rincianPesanan as $r): ?>
-                                [<?= htmlspecialchars($r['nama']) ?> x<?= $r['porsi'] ?>] 
-                            <?php endforeach; ?>
-                        </p>
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=Bayar+Kopi+Cengklik+<?= $totalBayar ?>" alt="QRIS" style="width: 160px; height: 160px;">
-                        <p style="font-size: 0.8em; color: #888; margin-top: 5px;">Scan QRIS untuk menyelesaikan pesanan</p>
-                    </div>
-                <?php endif; ?>
+                   <button type="submit" class="btn-pesan">
+        </button>
+    </form>
+    <!-- Tampilan Pembayaran QRIS Dinamis -->
+    <?php if (!empty($rincianPesanan)): ?>
+        <div class="qris-box">
+            <h3>Total Pembayaran: <?= formatRupiah($totalBayar) ?></h3>
+            <p class="order-details">
+                <?php foreach ($rincianPesanan as $r): ?>
+                    <?= htmlspecialchars($r['nama']) ?> x<?= $r['porsi'] ?><br>
+                <?php endforeach; ?>
+            </p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=Bayar+Kopi+Cengklik+<?= $totalBayar ?>" alt="QRIS" class="qris-img">
+            <p class="qris-note">Scan QRIS untuk menyelesaikan pesanan</p>
+         </div>
+            <?php endif; ?>
             </section>
         </main>
     </div>
