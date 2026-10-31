@@ -1,4 +1,4 @@
-¶# Kopi Shop Cengklik - Katalog Menu Dinamis & Kasir Pemesanan
+# Kopi Shop Cengklik - Katalog Menu Dinamis & Kasir Pemesanan
 
 Repositori ini berisi proyek web katalog menu interaktif berbasis PHP Native untuk Kopi Shop Cengklik yang berlokasi di area Waduk Cengklik, Boyolali, Jawa Tengah. Dibuat khusus untuk memenuhi tugas Ujian Tengah Semester (UTS) mata kuliah Pemrograman Web.
 
@@ -102,10 +102,11 @@ uts-pemweb-025A00200013/
 ## 8. Tangkapan Layar (Screenshots Antarmuka)
 
 ### Halaman Beranda & Profil (`index.php`)
-
+![tangkapan layar](assets/sreenshot-index.jpeg)
 ### Halaman Katalog Menu Dinamis (`katalog.php`)
-
+![tangkapan layar](assets/sreenshot-katalog.jpeg)
 ### Halaman Kasir Pemesanan Online (`pesan.php`)
+![tangkapan layar](assets/sreenshot-pesan.jpeg)
 
 ---
 

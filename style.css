@@ -93,7 +93,7 @@ header h1 {
 .menu-grid {
     display: grid;
     /*membuat tampilan grid dengan ukuran minimum 240px dan maksimum 1fr*/
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 20px;
     /* jarak antar card */
 }
@@ -127,7 +127,7 @@ header h1 {
 /*membuat tampilan badge*/
 .badge {
     padding: 4px 8px;
-    font-size: 0.75em;
+    font-size: 0.65em;
     font-weight: bold;
     border-radius: 4px;
     color: #fff;
@@ -328,7 +328,7 @@ footer {
 /*membuat tampilan gambar card */
 .card-img {
     width: 100%;
-    height: 160px;
+    height: 220px;
     object-fit: cover;
 }
 
@@ -339,4 +339,35 @@ footer {
     color: #2c3e50;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* Styling Halaman Profil Mahasiswa / Kafe */
+.profile-card {
+    background: #ffffff;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.btn-katalog,
+.btn-promo-nav {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 18px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.btn-katalog {
+    background-color: #2c3e50;
+}
+
+.btn-promo-nav {
+    background-color: #e74c3c;
 }

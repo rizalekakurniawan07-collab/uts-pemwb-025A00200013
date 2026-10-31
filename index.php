@@ -8,38 +8,6 @@ declare(strict_types=1);#php menjaga tipe data secara ketat
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- CSS style untuk mengatur tampilan halaman -->
     <title>Profil Mahasiswa - UTS Pemrograman Web</title>
     <link rel="stylesheet" href="style.css"> <!-- CSS style untuk mengatur tampilan halaman -->
-    <style>
-        .profile-card {
-            background: #ffffff;
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            text-align: center;
-        }
-        /* Mengatur gambar kafe agar lebarnya pas 100% dan tingginya rapi */
-        .cafe-hero-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-        /* Mengatur tombol link */
-        .btn-katalog, .btn-promo-nav {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 18px;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-        .btn-katalog { background-color: #2c3e50; }
-        .btn-promo-nav { background-color: #e74c3c; }
-    </style>
 </head>
 <body>
     <div class="container">
