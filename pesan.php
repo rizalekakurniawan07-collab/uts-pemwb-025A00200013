@@ -78,7 +78,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="number" name="jumlah_2" value="1" min="0" placeholder="Porsi"> <!--input untuk jumlah porsi-->
                     </div>
                    <button type="submit" class="btn-pesan">
-        </button>
+        </buttontype="submit" class="btn-pesan">
+      Hitung & Bayar
+</button>
     </form>
     <!-- Tampilan Pembayaran QRIS Dinamis -->
     <?php if (!empty($rincianPesanan)): ?>
