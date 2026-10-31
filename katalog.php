@@ -30,8 +30,7 @@ $kategoriList = ['Semua', 'Promo', 'Kopi', 'Non-Kopi', 'Snack', 'Makanan'];
             <h1>☕ Kopi Shop Cengklik</h1>
             <p class="shop-location">📍 Waduk Cengklik, Boyolali, Jawa Tengah</p>
             <div class="student-info" style="margin-top: 10px;">
-                <span><strong>Nama:</strong> Rizal Eka Kurniawan</span> | 
-                <span><strong>NIM:</strong> 025A00200013</span>
+
             </div>
         </header>
 
@@ -66,7 +65,7 @@ $kategoriList = ['Semua', 'Promo', 'Kopi', 'Non-Kopi', 'Snack', 'Makanan'];
                             <span class="badge badge-cheapest">PALING TERJANGKAU</span>
                         <?php endif; ?>
                     </div>
-                    
+                    <!-- menampilkan gambar item menu -->
                     <img src="<?= htmlspecialchars($item['gambar'] ?? 'https://via.placeholder.com/400x250?text=Kopi+Shop+Cengklik') ?>" alt="<?= htmlspecialchars($item['nama']) ?>" class="card-img">
                     
                     <div class="card-body">
