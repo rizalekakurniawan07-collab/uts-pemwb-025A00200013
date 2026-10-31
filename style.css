@@ -1,0 +1,391 @@
+/* STYLE.CSS - KONSEP RAPID FRAME */
+/*1. BASE FRAME (Fondasi Dasar)*/
+/* Reset jarak dasar bawaan browser */
+* {
+    box-sizing: border-box;
+    /* ukuran elemen konsisten */
+    margin: 0;
+    /* hapus margin luar */
+    padding: 0;
+    /* hapus jarak dalam */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Warna latar dan teks untuk seluruh web */
+body {
+    background-color: #f3e9d8;
+    /* warna latar krem */
+    color: #333;
+    /* warna teks utama */
+    line-height: 1.6;
+    /* spasi antar baris */
+    padding: 20px;
+    /* jarak aman layar */
+}
+
+/* Batas lebar maksimal halaman web */
+.container {
+    max-width: 1100px;
+    /* lebar maksimal web */
+    margin: 0 auto;
+    /* posisi rata tengah */
+}
+
+/* Bagian Atas (Header) dan Bawah (Footer) */
+header,
+footer {
+    text-align: center;
+    /* teks rata tengah */
+    border-color: #e9ecef;
+}
+
+/* Khusus jarak Header */
+header {
+    margin-bottom: 30px;
+    /* jarak kosong di bawah header */
+    padding: 20px 0;
+    border-bottom: 2px solid;
+    /* garis batas bawah */
+}
+
+/* Khusus jarak Footer */
+footer {
+    margin-top: 40px;
+    /* jarak kosong di atas footer */
+    padding: 20px 0;
+    color: #888;
+    font-size: 0.85em;
+    border-top: 1px solid;
+    /* garis batas atas */
+}
+
+/* Judul Utama Web / Nama Kafe */
+header h1 {
+    color: #2c3e50;
+    /* warna judul */
+    margin-bottom: 5px;
+}
+
+
+/*2. LAYOUT FRAME (Grid & Flexbox)*/
+/* Wadah Tombol-Tombol Kategori Filter */
+.filter-section,
+.action-buttons {
+    display: flex;
+    /* sejajarkan tombol ke samping */
+    justify-content: center;
+    /* posisikan tombol rata tengah */
+    gap: 10px;
+    /* jarak antar tombol */
+    flex-wrap: wrap;
+    /* otomatis turun jika layar sempit */
+}
+
+.filter-section {
+    margin-bottom: 30px;
+    /* jarak ke menu di bawahnya */
+}
+
+/* Wadah Grid (Pembungkus Kartu-Kartu Menu) */
+.menu-grid {
+    display: grid;
+    /* gunakan mode grid (kotak) */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    /* otomatis membagi kolom sesuai layar HP/PC */
+    gap: 20px;
+    /* jarak antar kartu menu */
+}
+
+/* Susunan Isi Kartu dari Atas ke Bawah */
+.card-body,
+.form-group {
+    display: flex;
+    flex-direction: column;
+    /* susun dari atas ke bawah */
+}
+
+.card-body {
+    padding: 15px;
+    flex-grow: 1;
+    /* memaksa tinggi kartu sama rata */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    /* rata kiri untuk form */
+}
+
+
+/*3. COMPONENT FRAME (Kartu, Gambar, Badge, Teks)*/
+/* Bentuk Dasar Kartu Menu & Kartu Profil Kafe */
+.menu-card,
+.profile-card {
+    background: #ffffff;
+    /* latar kartu putih */
+    border-radius: 10px;
+    /* sudut melengkung */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* bayangan halus (shadow) */
+}
+
+/* Khusus Kartu Menu */
+.menu-card {
+    overflow: hidden;
+    /* potong sisi gambar yang melampaui sudut */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e9ecef;
+}
+
+/* Khusus Kartu Profil Kafe (Halaman Index) */
+.profile-card {
+    max-width: 500px;
+    /* batas lebar maksimal */
+    margin: 40px auto;
+    /* jarak profil atas-bawah & rata tengah */
+    padding: 25px;
+    text-align: center;
+}
+
+/* Ukuran Gambar Menu & Gambar Profil Kafe */
+.card-img,
+.cafe-hero-img {
+    width: 100%;
+    /* lebar gambar penuh */
+    height: 220px;
+    /* tinggi gambar diseragamkan */
+    object-fit: cover;
+    /* gambar proporsional (tidak gepeng) */
+}
+
+/* Khusus Gambar Profil Kafe */
+.cafe-hero-img {
+    border-radius: 8px;
+    /* sudut gambar melengkung */
+    margin-bottom: 20px;
+}
+
+/* Kotak Informasi Jam Buka & Lokasi */
+.info-box {
+    background-color: #f1f8e9;
+    /* warna latar hijau muda */
+    border: 1px solid #c8e6c9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.9em;
+    color: #2e7d32;
+    /* warna teks hijau tua */
+    margin-bottom: 25px;
+}
+
+.info-box p {
+    margin-bottom: 6px;
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+    /* hapus spasi pada teks terakhir */
+}
+
+/* Teks Sekunder (Info Mahasiswa, Deskripsi, Lokasi) */
+.student-info,
+.card-desc,
+.shop-location {
+    color: #6c757d;
+    /* warna teks abu-abu pudar */
+}
+
+.student-info {
+    font-size: 0.9em;
+}
+
+.card-desc {
+    font-size: 0.85em;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    /* menekan harga ke ujung bawah */
+}
+
+.shop-location {
+    font-size: 0.85em;
+    color: #27ae60;
+    margin-top: 4px;
+}
+
+.cafe-desc {
+    font-size: 0.95em;
+    color: #555;
+    margin: 15px 0 20px 0;
+}
+
+/* Teks Label Kategori (Misal: NON-KOPI, MAKANAN) */
+.category-tag {
+    font-size: 0.8em;
+    color: #888;
+    text-transform: uppercase;
+    /* ubah teks jadi huruf BESAR semua */
+    letter-spacing: 0.5px;
+}
+
+/* Teks Judul Menu & Harga Akhir */
+.card-title,
+.final-price,
+.form-group label {
+    color: #2c3e50;
+    /* warna teks biru-hitam utama */
+}
+
+.card-title {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.final-price {
+    font-weight: bold;
+    font-size: 1.1em;
+    /* tebalkan huruf harga */
+}
+
+.price-box {
+    margin-top: auto;
+    /* posisi blok harga di paling bawah */
+}
+
+/* Teks Harga Lama (Sebelum Diskon) */
+.original-price {
+    text-decoration: line-through;
+    /* berikan coretan pada harga */
+    color: #999;
+    font-size: 0.85em;
+    margin-right: 5px;
+}
+
+/* Kotak Badge (Promo & Termurah) di Sudut Gambar */
+.card-badges {
+    position: absolute;
+    /* buat posisi melayang di atas gambar */
+    top: 10px;
+    /* jarak dari atas gambar */
+    left: 10px;
+    /* jarak dari kiri gambar */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 10;
+}
+
+.badge {
+    padding: 4px 8px;
+    font-size: 0.65em;
+    font-weight: bold;
+    border-radius: 4px;
+    color: #fff;
+    /* warna teks putih di dalam badge */
+}
+
+.badge-promo {
+    background-color: #e74c3c;
+    /* warna latar badge merah */
+}
+
+.badge-cheapest {
+    background-color: #27ae60;
+    /* warna latar badge hijau */
+}
+
+
+/* (Tombol & Form Input) */
+/* Transisi Hover / Sentuhan Mouse */
+a,
+button {
+    transition: all 0.3s ease;
+    /* berikan efek animasi pelan saat warna berubah */
+}
+
+/* Tombol Filter Kategori (Semua, Promo, Kopi) */
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #ced4da;
+    background-color: #ffffff;
+    color: #495057;
+    border-radius: 20px;
+    /* ujung tombol berbentuk pil bulat */
+    text-decoration: none;
+    /* hilangkan garis bawah pada teks */
+    font-size: 0.9em;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #2c3e50;
+    /* jadi gelap jika diklik/disorot */
+    color: #ffffff;
+    border-color: #2c3e50;
+}
+
+/* Tombol Utama (Lihat Menu / Katalog) */
+.btn-katalog,
+.btn-promo-nav {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 18px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Tombol Promo (Merah) */
+.btn-promo-nav {
+    padding: 12px 24px;
+    border-radius: 25px;
+    background-color: #e74c3c;
+    /* tombol warna merah */
+}
+
+.btn-promo-nav:hover {
+    background-color: #c0392b;
+    /* merah makin gelap saat disorot */
+}
+
+/* Tombol Menu Umum (Gelap) */
+.btn-katalog {
+    background-color: #2c3e50;
+    /* tombol warna gelap */
+}
+
+.btn-katalog:hover {
+    background-color: #1a252f;
+}
+
+/* Link Navigasi Kembali */
+.nav-back {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Kolom Isian Data (Form Input) */
+.form-group label {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    /* lebar isian memanjang ke samping */
+    padding: 8px 12px;
+    /* spasi kosong di dalam form input */
+    margin-top: 4px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    /* ujung kotak isian sedikit melengkung */
+}
