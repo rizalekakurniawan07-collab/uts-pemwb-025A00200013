@@ -26,7 +26,9 @@ $kategoriList = ['Semua', 'Promo', 'Kopi', 'Non-Kopi', 'Snack', 'Makanan'];
     <div class="container">
         <!-- Header & Navigasi -->
         <header>
-            <a href="index.php" class="nav-back">⬅ Kembali ke Profil</a>
+        <div>
+            <a href="index.php" class="nav-back">⬅ Kembali ke Profil</a><brr>
+        </div>
             <img src="assets/logo-cengklik.jpeg" alt="logo-cengklik" class="web-logo">
             <h1>Kopi Shop Cengklik</h1>
             <p class="shop-location">📍 Waduk Cengklik, Boyolali, Jawa Tengah</p>
