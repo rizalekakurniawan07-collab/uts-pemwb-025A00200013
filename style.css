@@ -154,7 +154,7 @@ header h1 {
 .cafe-hero-img {
     width: 100%;
     /* lebar gambar penuh */
-    height: 220px;
+    height: 250px;
     /* tinggi gambar diseragamkan */
     object-fit: cover;
     /* gambar proporsional (tidak gepeng) */
@@ -388,4 +388,14 @@ button {
     border: 1px solid #ced4da;
     border-radius: 6px;
     /* ujung kotak isian sedikit melengkung */
+}
+
+/* Logo di Header index.php */
+.web-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Membuat logo menjadi bulat */
+    margin-bottom: 10px;
 }

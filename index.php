@@ -13,6 +13,7 @@ declare(strict_types=1);#php menjaga tipe data secara ketat
     <div class="container">
         <!-- Header Profil Kafe -->
         <header>
+            <img src="assets/logo-cengklik.jpeg" alt="Logo Kopis hop Cengklik" class="web-logo">
             <h1> Kopi Shop Cengklik</h1>
             <p class="tagline">Menikmati Kopi Hangat dengan Pesona Sunset Waduk Cengklik</p>
         </header>
@@ -22,7 +23,6 @@ declare(strict_types=1);#php menjaga tipe data secara ketat
             <section class="profile-card">
                 <!-- Foto Suasana Kafe -->
                 <img src="assets/Outdoor-cenklik.jpg" alt="Suasana Kopi Shop Cengklik" class="cafe-hero-img">
-                
                 <h2>Tentang Kopi Shop Cengklik</h2>
                 <p class="cafe-desc">
                     Kopi Shop Cengklik hadir sebagai ruang bersantai terbaik di Boyolali. Kami menyajikan seduhan kopi lokal pilihan, racikan minuman segar non-kopi, serta aneka camilan lezat dengan latar pemandangan Waduk Cengklik yang menenangkan.
